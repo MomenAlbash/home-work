@@ -4,12 +4,6 @@ A phrase is a palindrome if, after converting all uppercase letters into lowerca
 Given a string s, return true if it is a palindrome, or false otherwise.
  */
 
-/*
-Q8: Lottery Number Checker-
- Generate a random list of 6 numbers between 1–50.
-- Compare it with a ticket [5, 10, 15, 20, 25, 30]
- and print how many match.
- */
 import 'dart:ffi';
 import 'dart:io';
 import 'dart:math';
