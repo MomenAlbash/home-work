@@ -10,8 +10,12 @@ import 'dart:io';
 void main() {
   print('please enter a number');
   int number = int.parse(stdin.readLineSync()!);
-  int sumOfDigets = sumOfDigetsNumber(number);
-  print('the sum of Diget:${sumOfDigets}');
+  int sumOfDiget;
+  do {
+    sumOfDiget = sumOfDigetsNumber(number);
+    number = sumOfDiget;
+  } while (!isSingleDiget(sumOfDiget));
+  print('the sum of Diget:${sumOfDiget}');
 }
 
 int sumOfDigetsNumber(int number) {
@@ -22,4 +26,8 @@ int sumOfDigetsNumber(int number) {
     sum += number2;
   }
   return sum;
+}
+
+bool isSingleDiget(int number) {
+  return number < 10 && number >= 0;
 }
